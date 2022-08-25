@@ -8,7 +8,7 @@ const Admin = () => {
 
   useEffect(() => {
     if (pickedImage) {
-      console.log(pickedImage.uri.split("/").at(-1));
+      console.log(pickedImage.uri.split("/"));
     }
   }, [pickedImage]);
   return (
