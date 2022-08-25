@@ -1,5 +1,4 @@
-import ImagePicker from "./ImagePicker";
+import ImagePickerCard from "./ImagePicker";
+import FocusedStatusBar from "./FocusedStatusBar";
 
-export {
-    ImagePicker
-};
+export { FocusedStatusBar, ImagePickerCard };
