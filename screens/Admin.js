@@ -5,12 +5,27 @@ import { FocusedStatusBar, ImagePickerCard } from "../components";
 
 const Admin = () => {
   const [pickedImage, setPickedImage] = useState(null);
+  const [ocrImage, setOcrImage] = useState(null);
 
   useEffect(() => {
     if (pickedImage) {
       const k = pickedImage.uri.split("/");
-
-      console.log(k[k.length - 1]);
+      k[k.length - 1] = "!!!!";
+      console.log(k);
+      // switch (k) {
+      //   case "01.jpeg":
+      //     setOcrImage("01_ocr.jpeg");
+      //     break;
+      //   case "02.jpeg":
+      //     setOcrImage("02_ocr.jpeg");
+      //     break;
+      //   case "03.jpeg":
+      //     setOcrImage("03_ocr.jpeg");
+      //     break;
+      //   case "04.jpeg":
+      //     setOcrImage("04_ocr.jpeg");
+      //     break;
+      // }
     }
   }, [pickedImage]);
   return (
@@ -25,6 +40,7 @@ const Admin = () => {
         pickedImage={pickedImage}
         pickedImageFn={setPickedImage}
       />
+      {ocrImage && <Image source={ocrImage} />}
     </View>
   );
 };
