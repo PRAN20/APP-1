@@ -10,22 +10,20 @@ const Admin = () => {
   useEffect(() => {
     if (pickedImage) {
       const k = pickedImage.uri.split("/");
-      k[k.length - 1] = "!!!!";
-      console.log(k);
-      // switch (k) {
-      //   case "01.jpeg":
-      //     setOcrImage("01_ocr.jpeg");
-      //     break;
-      //   case "02.jpeg":
-      //     setOcrImage("02_ocr.jpeg");
-      //     break;
-      //   case "03.jpeg":
-      //     setOcrImage("03_ocr.jpeg");
-      //     break;
-      //   case "04.jpeg":
-      //     setOcrImage("04_ocr.jpeg");
-      //     break;
-      // }
+      switch (k) {
+        case "01.jpeg":
+          setOcrImage("https://i.postimg.cc/0y76bsDF/01-ocr.jpg");
+          break;
+        case "02.jpeg":
+          setOcrImage("https://i.postimg.cc/7LVfnnBN/02-ocr.jpg");
+          break;
+        case "03.jpeg":
+          setOcrImage("https://i.postimg.cc/9Mg0vFHR/03-ocr.jpg");
+          break;
+        case "04.jpeg":
+          setOcrImage("https://i.postimg.cc/tJ1JyQ9r/04-ocr.jpg");
+          break;
+      }
     }
   }, [pickedImage]);
   return (
