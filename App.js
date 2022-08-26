@@ -8,10 +8,10 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import { MaterialCommunityIcons, Ionicons } from "@expo/vector-icons";
 
-import Admin from './screens/Admin'
-import Details from './screens/Details'
-import Home from './screens/Home'
-import Reader from './screens/Reader'
+import Admin from "./screens/Admin";
+import Details from "./screens/Details";
+import Home from "./screens/Home";
+import Reader from "./screens/Reader";
 
 /***
  * Navigation Setup
