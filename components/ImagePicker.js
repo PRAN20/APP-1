@@ -40,7 +40,7 @@ const ImagePickerCard = ({ text, displaySize, pickedImageFn, pickedImage }) => {
           { compress: 1, format: ImageManipulator.SaveFormat.JPEG }
         );
         const source = { uri: response.uri };
-        pickedImageFn(source);
+        pickedImageFn(response);
       }
     } catch (error) {
       console.log(error);
@@ -72,7 +72,7 @@ const ImagePickerCard = ({ text, displaySize, pickedImageFn, pickedImage }) => {
             borderRadius: SIZES.font,
             opacity: 0.9,
           }}
-          source={pickedImage}
+          source={{ uri: pickedImage.uri }}
         />
       )}
       <View
