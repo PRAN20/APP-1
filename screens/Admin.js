@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import { FocusedStatusBar, ImagePickerCard } from "../components";
 
-import { assets } from "../constants";
+import { assets, COLORS } from "../constants";
 
 const Admin = () => {
   const displaySize = 280;
