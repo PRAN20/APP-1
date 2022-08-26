@@ -7,27 +7,29 @@ import { COLORS, books, assets } from "../constants";
 const Home = () => {
   console.log(books);
   return (
-    <View style={{ flex: 1, flexDirection: "row" }}>
+    <>
       <FocusedStatusBar
         backgroundColor={COLORS.primary}
         barStyle="light-content"
       />
-      {books.books && (
-        <FlatList
-          data={books.books}
-          renderItem={({ item }) => <BookCard data={item} />}
-          keyExtractor={(item) => item.title + item.class + item.subject}
-          showsVerticalScrollIndicator={false}
-          ListHeaderComponent={
-            <HomeHeader
-            // onSearch={handleSearch}
-            // userInfo={userInfo}
-            // loginFn={loginFn}
-            />
-          }
-        />
-      )}
-    </View>
+      <View style={{ flex: 1, flexDirection: "row" }}>
+        {books.books && (
+          <FlatList
+            data={books.books}
+            renderItem={({ item }) => <BookCard data={item} />}
+            keyExtractor={(item) => item.title + item.class + item.subject}
+            showsVerticalScrollIndicator={false}
+            ListHeaderComponent={
+              <HomeHeader
+              // onSearch={handleSearch}
+              // userInfo={userInfo}
+              // loginFn={loginFn}
+              />
+            }
+          />
+        )}
+      </View>
+    </>
   );
 };
 
