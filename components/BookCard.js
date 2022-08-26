@@ -7,10 +7,6 @@ import { RectButton } from "../components";
 import { Title } from "./SubInfo";
 
 const BookCard = ({ data }) => {
-  console.log(
-    require("../assets/images/books/7-8/An Alien Hand-English_Supplementary_Reader-7.jpg")
-  );
-  console.log(data);
   return (
     <View
       style={{
