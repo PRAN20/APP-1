@@ -2,11 +2,12 @@ import { View, Text, Image, Platform } from "react-native";
 import React, { useEffect, useState } from "react";
 
 import { FocusedStatusBar, ImagePickerCard } from "../components";
+import { useWindowDimensions } from "react-native";
 
 import { assets, COLORS } from "../constants";
 
 const Admin = () => {
-  const displaySize = Dimensions.get("window").width / 2;
+  const displaySize = useWindowDimensions().width / 4;
   const [pickedImage1, setPickedImage1] = useState(null);
   const [ocrImage1, setOcrImage1] = useState(null);
   // const [loading1, setLoading1] = useState(true);
