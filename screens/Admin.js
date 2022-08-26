@@ -20,7 +20,7 @@ const Admin = () => {
       let ocrImage = "";
       switch (pickedImage1.width) {
         case 1014:
-          ocrImage = "https://i.postimg.cc/0y76bsDF/01-ocr.jpg";
+          ocrImage = { uri: assets.im01 };
           break;
         case 1018:
           ocrImage = "https://i.postimg.cc/7LVfnnBN/02-ocr.jpg";
