@@ -23,11 +23,11 @@ export const FONTS = {
   // medium: "InterMedium",
   // regular: "InterRegular",
   // light: "InterLight",
-  bold: "HelveticaNeue-Bold",
-  semiBold: "Helvetica",
-  medium: "HelveticaNeue-Medium",
-  regular: "HelveticaNeue-Thin",
-  light: "HelveticaNeue-Light",
+  // bold: "HelveticaNeue-Bold",
+  // semiBold: "Helvetica",
+  // medium: "HelveticaNeue-Medium",
+  // regular: "HelveticaNeue-Thin",
+  // light: "HelveticaNeue-Light",
 };
 
 export const SHADOWS = {

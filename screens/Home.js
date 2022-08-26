@@ -7,7 +7,7 @@ import { COLORS, books, assets } from "../constants";
 const Home = () => {
   console.log(books);
   return (
-    <View>
+    <View style={{ flex: 1, flexDirection: "row" }}>
       <FocusedStatusBar
         backgroundColor={COLORS.primary}
         barStyle="light-content"
