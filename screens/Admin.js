@@ -9,9 +9,9 @@ import { assets, COLORS } from "../constants";
 const Admin = () => {
   let displaySize = 0;
   if (Platform.OS == "web") {
-    displaySize = useWindowDimensions().width / 2;
-  } else {
     displaySize = useWindowDimensions().width / 4;
+  } else {
+    displaySize = useWindowDimensions().width / 2;
   }
   const [pickedImage1, setPickedImage1] = useState(null);
   const [ocrImage1, setOcrImage1] = useState(null);
