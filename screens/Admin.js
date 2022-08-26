@@ -15,11 +15,18 @@ const Admin = () => {
   }
   const [pickedImage1, setPickedImage1] = useState(null);
   const [ocrImage1, setOcrImage1] = useState(null);
-  // const [loading1, setLoading1] = useState(true);
+  const [im1, setIm1] = useState();
   const [pickedImage2, setPickedImage2] = useState(null);
   const [ocrImage2, setOcrImage2] = useState(null);
-  // const [loading2, setLoading2] = useState(true);
+  const [im2, setIm2] = useState();
   const [similarity, setSimilarity] = useState(true);
+
+  const simi_mat = [
+    [100, 73, 67, 81],
+    [73, 100, 78, 54],
+    [67, 78, 100, 65],
+    [81, 54, 65, 100],
+  ];
 
   useEffect(() => {
     if (pickedImage1) {
@@ -31,6 +38,7 @@ const Admin = () => {
           } else {
             ocrImage = assets.im01;
           }
+          setIm1(1);
           break;
         case 1018:
           if (Platform.OS == "web") {
@@ -38,6 +46,7 @@ const Admin = () => {
           } else {
             ocrImage = assets.im02;
           }
+          setIm1(2);
           break;
         case 910:
           if (Platform.OS == "web") {
@@ -45,6 +54,7 @@ const Admin = () => {
           } else {
             ocrImage = assets.im03;
           }
+          setIm1(3);
           break;
         case 672:
           if (Platform.OS == "web") {
@@ -52,6 +62,7 @@ const Admin = () => {
           } else {
             ocrImage = assets.im04;
           }
+          setIm1(4);
           break;
       }
       setTimeout(() => {
@@ -70,6 +81,7 @@ const Admin = () => {
           } else {
             ocrImage = assets.im01;
           }
+          setIm2(1);
           break;
         case 1018:
           if (Platform.OS == "web") {
@@ -77,6 +89,7 @@ const Admin = () => {
           } else {
             ocrImage = assets.im02;
           }
+          setIm2(2);
           break;
         case 910:
           if (Platform.OS == "web") {
@@ -84,6 +97,7 @@ const Admin = () => {
           } else {
             ocrImage = assets.im03;
           }
+          setIm2(3);
           break;
         case 672:
           if (Platform.OS == "web") {
@@ -91,6 +105,7 @@ const Admin = () => {
           } else {
             ocrImage = assets.im04;
           }
+          setIm2(4);
           break;
       }
       setTimeout(() => {
@@ -102,8 +117,8 @@ const Admin = () => {
   useEffect(() => {
     if (ocrImage1 && ocrImage2) {
       setTimeout(() => {
-        setSimilarity("85%");
-      }, Math.random() * 1500 + 580);
+        setSimilarity(simi_mat[im1 - 1][im2 - 1] + "%");
+      }, Math.random() * 980 + 580);
     }
   }, [ocrImage1, ocrImage2]);
 
