@@ -1,7 +1,7 @@
 import { View, Text, Image, Platform } from "react-native";
 import React, { useEffect, useState } from "react";
 
-import { FocusedStatusBar, ImagePickerCard } from "../components";
+import { FocusedStatusBar, ImagePickerCard, HomeHeader } from "../components";
 import { useWindowDimensions } from "react-native";
 
 import { assets, COLORS } from "../constants";
@@ -9,7 +9,7 @@ import { assets, COLORS } from "../constants";
 const Admin = () => {
   let displaySize = 0;
   if (Platform.OS == "web") {
-    displaySize = useWindowDimensions().width / 4;
+    displaySize = useWindowDimensions().width / 5.1;
   } else {
     displaySize = useWindowDimensions().width / 2;
   }
@@ -128,6 +128,7 @@ const Admin = () => {
         backgroundColor={COLORS.primary}
         barStyle="light-content"
       />
+      <HomeHeader />
       <View
         style={{
           flexDirection: "column",

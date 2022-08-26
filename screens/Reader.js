@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-import { FocusedStatusBar } from "../components";
+import { FocusedStatusBar, HomeHeader } from "../components";
 import { COLORS } from "../constants";
 
 const Reader = () => {
@@ -11,6 +11,7 @@ const Reader = () => {
         backgroundColor={COLORS.primary}
         barStyle="light-content"
       />
+      <HomeHeader />
       <Text>Reader</Text>
     </View>
   );

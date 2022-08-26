@@ -1,8 +1,8 @@
-import { View, Text } from "react-native";
+import { View, Text, FlatList, Image } from "react-native";
 import React from "react";
 
-import { FocusedStatusBar } from "../components";
-import { COLORS } from "../constants";
+import { FocusedStatusBar, BookCard, HomeHeader } from "../components";
+import { COLORS, books, assets } from "../constants";
 
 const Home = () => {
   return (
@@ -11,8 +11,21 @@ const Home = () => {
         backgroundColor={COLORS.primary}
         barStyle="light-content"
       />
-
-      <Text>Home</Text>
+      {books.books && (
+        <FlatList
+          data={books.books}
+          renderItem={({ item }) => <BookCard data={item} />}
+          keyExtractor={(item) => item.title}
+          showsVerticalScrollIndicator={false}
+          ListHeaderComponent={
+            <HomeHeader
+            // onSearch={handleSearch}
+            // userInfo={userInfo}
+            // loginFn={loginFn}
+            />
+          }
+        />
+      )}
     </View>
   );
 };
