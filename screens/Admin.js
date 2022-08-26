@@ -6,7 +6,7 @@ import { FocusedStatusBar, ImagePickerCard } from "../components";
 import { assets, COLORS } from "../constants";
 
 const Admin = () => {
-  const displaySize = 280;
+  const displaySize = Dimensions.get("window").width / 2;
   const [pickedImage1, setPickedImage1] = useState(null);
   const [ocrImage1, setOcrImage1] = useState(null);
   // const [loading1, setLoading1] = useState(true);
