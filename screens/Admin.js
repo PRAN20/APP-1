@@ -70,65 +70,71 @@ const Admin = () => {
   }, [ocrImage1, ocrImage2]);
 
   return (
-    <View
-      style={{
-        flexDirection: "column",
-        justifyContent: "space-between",
-        alignItems: "center",
-      }}
-    >
+    <View>
+      <FocusedStatusBar
+        backgroundColor={COLORS.primary}
+        barStyle="light-content"
+      />
       <View
         style={{
-          flexDirection: "row",
-          justifyContent: "space-evenly",
+          flexDirection: "column",
+          justifyContent: "space-between",
           alignItems: "center",
         }}
       >
-        <ImagePickerCard
-          text={"Pick First Image"}
-          displaySize={displaySize}
-          pickedImage={pickedImage1}
-          pickedImageFn={setPickedImage1}
-        />
-        {ocrImage1 && (
-          <Image
-            source={ocrImage1}
-            resizeMode="cover"
-            style={{
-              width: displaySize,
-              height: displaySize,
-              opacity: 0.9,
-            }}
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+          }}
+        >
+          <ImagePickerCard
+            text={"Pick First Image"}
+            displaySize={displaySize}
+            pickedImage={pickedImage1}
+            pickedImageFn={setPickedImage1}
           />
+          {ocrImage1 && (
+            <Image
+              source={ocrImage1}
+              resizeMode="cover"
+              style={{
+                width: displaySize,
+                height: displaySize,
+                opacity: 0.9,
+              }}
+            />
+          )}
+        </View>
+        {ocrImage1 && ocrImage2 && similarity && (
+          <Text>Similarity: {similarity}</Text>
         )}
-      </View>
-      {ocrImage1 && ocrImage2 && similarity && (
-        <Text>Similarity: {similarity}</Text>
-      )}
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <ImagePickerCard
-          text={"Pick Second Image"}
-          displaySize={displaySize}
-          pickedImage={pickedImage2}
-          pickedImageFn={setPickedImage2}
-        />
-        {ocrImage2 && (
-          <Image
-            source={ocrImage2}
-            resizeMode="cover"
-            style={{
-              width: displaySize,
-              height: displaySize,
-              opacity: 0.9,
-            }}
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <ImagePickerCard
+            text={"Pick Second Image"}
+            displaySize={displaySize}
+            pickedImage={pickedImage2}
+            pickedImageFn={setPickedImage2}
           />
-        )}
+          {ocrImage2 && (
+            <Image
+              source={ocrImage2}
+              resizeMode="cover"
+              style={{
+                width: displaySize,
+                height: displaySize,
+                opacity: 0.9,
+              }}
+            />
+          )}
+        </View>
       </View>
     </View>
   );
