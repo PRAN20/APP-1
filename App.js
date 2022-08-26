@@ -51,9 +51,9 @@ export default function App() {
             name="Admin"
             component={Admin}
             options={{
-              tabBarLabel: "Admin",
+              tabBarLabel: "Verify",
               tabBarIcon: ({ size, color }) => (
-                <Ionicons name="cog" color={color} size={size} />
+                <Ionicons name="checkmark-done" color={color} size={size} />
               ),
             }}
           />
