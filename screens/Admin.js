@@ -7,7 +7,7 @@ import { useWindowDimensions } from "react-native";
 import { assets, COLORS } from "../constants";
 
 const Admin = () => {
-  const displaySize = useWindowDimensions().width / 4;
+  const displaySize = useWindowDimensions().width / 2;
   const [pickedImage1, setPickedImage1] = useState(null);
   const [ocrImage1, setOcrImage1] = useState(null);
   // const [loading1, setLoading1] = useState(true);
