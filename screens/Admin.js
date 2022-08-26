@@ -27,13 +27,25 @@ const Admin = () => {
           }
           break;
         case 1018:
-          ocrImage = "https://i.postimg.cc/7LVfnnBN/02-ocr.jpg";
+          if (Platform.OS == "web") {
+            ocrImage = "https://i.postimg.cc/7LVfnnBN/02-ocr.jpg";
+          } else {
+            ocrImage = assets.im02;
+          }
           break;
         case 910:
-          ocrImage = "https://i.postimg.cc/9Mg0vFHR/03-ocr.jpg";
+          if (Platform.OS == "web") {
+            ocrImage = "https://i.postimg.cc/9Mg0vFHR/03-ocr.jpg";
+          } else {
+            ocrImage = assets.im03;
+          }
           break;
         case 672:
-          ocrImage = "https://i.postimg.cc/tJ1JyQ9r/04-ocr.jpg";
+          if (Platform.OS == "web") {
+            ocrImage = "https://i.postimg.cc/tJ1JyQ9r/04-ocr.jpg";
+          } else {
+            ocrImage = assets.im04;
+          }
           break;
       }
       setTimeout(() => {
@@ -47,16 +59,32 @@ const Admin = () => {
       let ocrImage = "";
       switch (pickedImage2.width) {
         case 1014:
-          ocrImage = "https://i.postimg.cc/0y76bsDF/01-ocr.jpg";
+          if (Platform.OS == "web") {
+            ocrImage = "https://i.postimg.cc/0y76bsDF/01-ocr.jpg";
+          } else {
+            ocrImage = assets.im01;
+          }
           break;
         case 1018:
-          ocrImage = "https://i.postimg.cc/7LVfnnBN/02-ocr.jpg";
+          if (Platform.OS == "web") {
+            ocrImage = "https://i.postimg.cc/7LVfnnBN/02-ocr.jpg";
+          } else {
+            ocrImage = assets.im02;
+          }
           break;
         case 910:
-          ocrImage = "https://i.postimg.cc/9Mg0vFHR/03-ocr.jpg";
+          if (Platform.OS == "web") {
+            ocrImage = "https://i.postimg.cc/9Mg0vFHR/03-ocr.jpg";
+          } else {
+            ocrImage = assets.im03;
+          }
           break;
         case 672:
-          ocrImage = "https://i.postimg.cc/tJ1JyQ9r/04-ocr.jpg";
+          if (Platform.OS == "web") {
+            ocrImage = "https://i.postimg.cc/tJ1JyQ9r/04-ocr.jpg";
+          } else {
+            ocrImage = assets.im04;
+          }
           break;
       }
       setTimeout(() => {
