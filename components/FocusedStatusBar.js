@@ -8,6 +8,7 @@ const FocusedStatusBar = ({ backgroundColor, ...props }) => {
   if (Platform.OS === "web") {
     HEADER_HEIGHT = 0;
   }
+  HEADER_HEIGHT = 0;
   return (
     <>
       <View
