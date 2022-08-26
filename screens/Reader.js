@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 
 import { FocusedStatusBar, HomeHeader } from "../components";
-import { COLORS } from "../constants";
+import { COLORS, SIZES } from "../constants";
 
 const Reader = () => {
   return (
@@ -12,7 +12,14 @@ const Reader = () => {
         barStyle="light-content"
       />
       <HomeHeader />
-      <Text>
+      <Text
+        style={{
+          marginTop: SIZES.medium,
+          paddingBottom: SIZES.small,
+          paddingLeft: 10,
+          paddingRight: 10,
+        }}
+      >
         The fungi constitute a unique kingdom of heterotrophic organisms. They
         show a great diversity in morphology and habitat. You must have seen
         fungi on a moist bread and rotten fruits. The common mushroom you eat
@@ -25,7 +32,14 @@ const Reader = () => {
         in warm and humid places. Have you ever wondered why we keep food in the
         refrigerator ?{" "}
       </Text>
-      <Text>
+      <Text
+        style={{
+          marginTop: SIZES.medium,
+          paddingBottom: SIZES.small,
+          paddingLeft: 10,
+          paddingRight: 10,
+        }}
+      >
         Yes, it is to prevent food from going bad due to bacterial or fungal
         infections. With the exception of yeasts which are unicellular, fungi
         are filamentous. Their bodies consist of long, slender thread-like
@@ -35,7 +49,14 @@ const Reader = () => {
         their hyphae. The cell walls of fungi are composed of chitin and
         polysaccharides.{" "}
       </Text>
-      <Text>
+      <Text
+        style={{
+          marginTop: SIZES.medium,
+          paddingBottom: SIZES.small,
+          paddingLeft: 10,
+          paddingRight: 10,
+        }}
+      >
         Most fungi are heterotrophic and absorb soluble organic matter from dead
         substrates and hence are called saprophytes. Those that depend on living
         plants and animals are called parasites. They can also live as symbionts
@@ -45,7 +66,14 @@ const Reader = () => {
         called conidia or sporangiospores or zoospores, and sexual reproduction
         is by oospores, ascospores and basidiospores.{" "}
       </Text>
-      <Text>
+      <Text
+        style={{
+          marginTop: SIZES.medium,
+          paddingBottom: SIZES.small,
+          paddingLeft: 10,
+          paddingRight: 10,
+        }}
+      >
         The various spores are produced in distinct structures called fruiting
         bodies. The sexual cycle involves the following three steps: (i) Fusion
         of protoplasms between two motile or non-motile gametes called
@@ -60,7 +88,14 @@ const Reader = () => {
         and the cells become diploid. The fungi form fruiting bodies in which
         reduction division occurs, leading to formation of haploid spores.{" "}
       </Text>
-      <Text>
+      <Text
+        style={{
+          marginTop: SIZES.medium,
+          paddingBottom: SIZES.small,
+          paddingLeft: 10,
+          paddingRight: 10,
+        }}
+      >
         The morphology of the mycelium, mode of spore formation and fruiting
         bodies form the basis for the division of the kingdom into various
         classes.
