@@ -1,7 +1,7 @@
-import im01 from "../assets/images/01.jpeg";
-import im02 from "../assets/images/02.jpeg";
-import im03 from "../assets/images/03.jpeg";
-import im04 from "../assets/images/04.jpeg";
+import im01 from "../assets/images/01_ocr.jpeg";
+import im02 from "../assets/images/02_ocr.jpeg";
+import im03 from "../assets/images/03_ocr.jpeg";
+import im04 from "../assets/images/04_ocr.jpeg";
 
 export default {
   im01,
